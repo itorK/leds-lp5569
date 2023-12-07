@@ -1,5 +1,5 @@
 # leds-lp5569
-This is experimental module as a LED driver for NBG7815 device.
+This is experimental LED driver as a module for NBG7815 device.
 
 ## Usage:
 1. Put module in the openwrt path -> /openwrt/package/kernel
