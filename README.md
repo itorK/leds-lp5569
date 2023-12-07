@@ -18,12 +18,13 @@ make V=sc package/kernel/leds-lp5569/compile
 ```
 root@OpenWrt:~# echo 14 > /sys/devices/platform/soc/78b6000.i2c/i2c-0/0-0032/led_pattern
 root@OpenWrt:~# echo 1 > /sys/devices/platform/soc/78b6000.i2c/i2c-0/0-0032/run_engine
+
 root@OpenWrt:~# echo 14 > /sys/devices/platform/soc/78b6000.i2c/i2c-0/0-0035/led_pattern
 root@OpenWrt:~# echo 1 > /sys/devices/platform/soc/78b6000.i2c/i2c-0/0-0035/run_engine
 ```
 
+## Patterns implemented
 
-Patterns:
 ```
 //1
 static const u8 mode_slow_blinking_w[] = {
@@ -142,3 +143,13 @@ static const u8 mode_error[] = {
 	0x01, 0xB6, 0x00, 0x49, 0x9F, 0x80, 0x40, 0x00, 0x9F, 0x81, 0x40, 0xFF, 0xC0, 0x00,
 };
 ```
+
+## How to make own pattern
+
+1. Download and install LP5569 EVM 
+https://www.ti.com/tool/download/SNVC210
+
+2. Read instructions
+   https://www.ti.com/lit/an/snva822/snva822.pdf?ts=1701926645742
+
+3. Make some assembler code and compile by LASM.EXE tool
