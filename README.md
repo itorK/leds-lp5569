@@ -10,6 +10,12 @@ This is experimental LED driver as a module for NBG7815 device.
 ```
 make V=sc package/kernel/leds-lp5569/compile
 ```
+4. Load module:
+
+```
+rmmod led-lp5569
+insmod led-lp5569.ko
+```
 
 4. Play fun with leds as example:
 
